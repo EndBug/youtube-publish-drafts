@@ -250,8 +250,8 @@
     const SORTING_MENU_BUTTON_SELECTOR = 'button';
     const SORTING_ITEM_MENU_SELECTOR = 'tp-yt-paper-listbox#items';
     const SORTING_ITEM_MENU_ITEM_SELECTOR = 'ytd-menu-service-item-renderer';
-    const MOVE_TO_TOP_INDEX = 4;
-    const MOVE_TO_BOTTOM_INDEX = 5;
+    const MOVE_TO_TOP_INDEX = 5;
+    const MOVE_TO_BOTTOM_INDEX = 6;
 
     class SortingDialog {
         constructor(raw) {
