@@ -14,9 +14,7 @@
     // -----------------------------------------------------------------
     // ~ SORT PLAYLIST CONFIG
     // -----------------------------------------------------------------
-    const SORTING_KEY = (one, other) => {
-        return one.name.localeCompare(other.name, undefined, {numeric: true, sensitivity: 'base'});
-    };
+    const SORTING_COMPAREFN = undefined;
     // END OF CONFIG (not safe to edit stuff below)
     // -----------------------------------------------------------------
 
@@ -305,7 +303,7 @@
         debugLog('sorting playlist');
         const videos = await playlistVideos();
         debugLog(`found ${videos.length} videos`);
-        const videoNames = videos.map((v) => v.name).sort(SORTING_KEY);
+        const videoNames = videos.map((v) => v.name).sort(SORTING_COMPAREFN);
 
         let index = 1;
         for (let name of videoNames) {
