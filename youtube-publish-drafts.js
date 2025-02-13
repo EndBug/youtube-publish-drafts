@@ -305,8 +305,7 @@
         debugLog('sorting playlist');
         const videos = await playlistVideos();
         debugLog(`found ${videos.length} videos`);
-        videos.sort(SORTING_KEY);
-        const videoNames = videos.map((v) => v.name);
+        const videoNames = videos.map((v) => v.name).sort(SORTING_KEY);
 
         let index = 1;
         for (let name of videoNames) {
